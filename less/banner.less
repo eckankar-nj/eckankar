@@ -22,17 +22,16 @@
     }
   
     .site-footer {
-      border-top:2.6em solid #4da4d7;
+      border-top:2.6em solid @blue;
       margin-top:1.6em;
     }
   }
-  
   
   .site-header .container, .site-header .container a {}
   
   @media screen, projection {
     .site-header,
-    .site-header a { background-color:#4da4d7; color:#fefefe }
+    .site-header a { background-color:@blue; color:@white }
     .site-title a:before {
       vertical-align:middle;
       display:inline-block;
@@ -42,7 +41,7 @@
     }
 
     .site-footer, .site-footer a {
-      background-color:#e8f2fb;
+      background-color:@mist;
     }  
   }
   .site-header a:focus {}
