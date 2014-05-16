@@ -1,0 +1,6 @@
+{
+  "private": true,
+  "devDependencies": {
+    "less": "^1.7.0"
+  }
+}
