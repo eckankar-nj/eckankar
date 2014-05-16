@@ -1,0 +1,70 @@
+/*!
+ * layout styles adapted from "action" theme
+ * @link http://github.com/ryanve/action
+ */
+
+/* =layout
+   --------------------------------------------------------------------- */
+  body { margin:0 auto; width:100%; padding:0; }
+  
+  .site-header { margin:0 auto; }
+  .site-branding { margin-bottom:1em; }
+  .site-description { font-weight:inherit; }
+  .hide-tagline .site-description { display:none; }
+  .site-footer { clear:both; margin:1em auto; padding:1em; }
+  .header-widget-area { clear:left; margin-bottom:0; }
+
+  .widget-area, .widget-area > ul { list-style-type:none; padding-left:0; }
+  .widgettitle { margin:.4em 0; }
+  li.widget { display:block; margin:2em 0; }
+  li.widget:first-child { margin-top:inherit; }
+  li.widget:last-child { margin-bottom:inherit; }
+  
+  main { 
+    display:block; /*clear:left; float:left;*/
+    width:100%; max-width:100%; 
+    margin:1em auto; padding:0; 
+  }
+  main:after { display:table; content:" "; clear:both; }
+
+  .loop { padding:0; }
+  .loop-header:not(:empty) { margin-bottom:2em; }
+  .loop-header h1 { margin-top:inherit; }
+  .loop-nav { clear:both; margin-top:2em; margin-bottom:1em; font-weight:bold; }
+  .loop-nav a { display:inline-block; padding:.5em 0; margin:0 1em 1em 0; }
+  .singular .loop-nav a { display:block; clear:both; margin-bottom:2px; }
+  .plural .loop-nav [rel~="prev"]:before { content:"< "; }
+  .plural .loop-nav [rel~="next"]:after { content:" >"; }
+
+  /* =layout=modifiers */
+  
+  @media (min-width:53em) {
+    .l-rsidebar main { max-width:50em; }
+    .l-rsidebar .loop { width:100%; max-width:31em; float:left; }
+    .l-rsidebar .major-widget-area, 
+    .l-rsidebar .minor-widget-area { width:32%; max-width:18.75em; margin:0; float:right; clear:right; }
+    
+    .l-lsidebar main { max-width:50em; }
+    .l-lsidebar .loop { width:100%; max-width:30em; float:right; }
+    .l-lsidebar .major-widget-area, 
+    .l-lsidebar .minor-widget-area { width:32%; max-width:18.75em; margin:0; float:left; clear:left; }
+  }
+
+  @media (min-width:62.5em) {
+    .l-rsidebar main, .l-lsidebar main { max-width:60em; }
+    .l-rsidebar .loop, .l-lsidebar .loop { max-width:40em; }
+  }
+
+  @media (min-width:68em) {
+    .l-rsidebar main, .l-lsidebar main { max-width:64em; }
+    .l-rsidebar .loop, .l-lsidebar .loop { max-width:43.75em; }
+  }
+
+  /* clearfix */
+  .l-lsidebar .loop:after, 
+  .l-lsidebar .minor-widget-area:after { display:table; content:" "; clear:both; }
+  
+  /* overrides */
+  .full-width .loop, .full-width .major-widget-area, .full-width .minor-widget-area {
+    width:100%; max-width:100%; clear:both; padding-left:0; padding-right:0; margin-bottom:1em;
+  }

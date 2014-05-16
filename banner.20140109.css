@@ -1,0 +1,48 @@
+  
+  .site-title {
+    font-size:1.236em;
+  }
+  .site-title a {
+    display:block;
+  }
+  .site-title a span {
+    padding:0 10px 30px 0; 
+    /*padding:10px 10px 30px;*/
+    display:inline-block;
+    /*background:radial-gradient(circle 45px at 100px 50%, #666 20px);*/
+  }
+  .site-title a:before {
+    vertical-align:middle;
+    display:inline-block;
+    margin:0 4px 8px 0;
+    padding-right:12px;
+    content:url(http://eck.airve.com/static/logo/eckankar-symbol_trim_50_blue.png);
+  }
+  @media (max-width:30em) {
+    .site-title a span {
+      display:none;
+    }
+  } 
+  
+  .site-header, .site-header a, 
+  .site-footer, .site-footer a  { 
+    /*color:#fefefe;*/
+    background-color:#e8f2fb;
+  }
+  .site-header a:focus { 
+    /*color:#815e17;*/
+  }
+  .site-header a:hover { 
+    color:#815e17;
+  }
+  body { margin-top:0!important; padding-top:0!important; }
+  /*
+  html { background-color:#02539c; color:#fefefe; }
+  body { background-color:#fefefe; color:#222; margin:0; padding:0; }
+  */
+  
+  .site-header .container,
+  .site-footer .container  { padding:2px; margin:0 auto; max-width:64em; }
+  
+  
+  

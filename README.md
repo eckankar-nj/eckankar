@@ -1,4 +1,1 @@
-themes
-======
-
-/wp-content/themes directory for the website
+# /wp-content/themes/eckankar

@@ -1,0 +1,131 @@
+/*!
+ * content styles adapted from "action" theme
+ * @link http://github.com/ryanve/action
+ */
+ 
+/* =h=proximity 
+ -------------------------------------------------- */ 
+ /*
+  h1, h2 { margin-top:.618em; margin-bottom:.618em; }
+  h3, h4, h5, h6 { margin-top:1.146em; margin-bottom:1em; }
+  h1 ~ .subline { margin-top:.382em; margin-bottom:.382em; }
+  h1 + .subline, .hgroup  h1 { margin-top:.146em; margin-bottom:.146em; }
+  */
+
+/* =h=size 
+ -------------------------------------------------- */
+  /*
+  h1, h2, h3 { line-height:1.236; }
+  h1 { font-size:1.618em; }
+  h3, h1 ~ .subline { font-size:1.146em; }
+  h2, h1 + .subline { font-size:1.382em; }
+  h4, h5 { font-size:1em; }
+  h6 { font-size:.944em; }
+
+  @media (min-width:30em) {
+    h1 { font-size:2em; }
+    h3, h1 ~ .subline { font-size:1.236em; }
+    h2, h1 + .subline { font-size:1.5em; }
+  }
+  */
+  h1, h2 { margin:.618em 0; line-height:1.236 }
+  h3,h4,h5,h6 { margin-top:1.146em; margin-bottom:1em }
+  main h1, main h2, main h3, main h4, main h5, main h6 { clear:both }
+  h1 { font-size:1.618em; }
+  h2 { font-size:1.382em; }
+  h3 { font-size:1.236em; }
+  h4 { font-size:1.09em; }
+  h5 { font-size:1em }
+  h6 { font-size:.94em }
+  @media (min-width:30em) {
+    .singular h1.entry-title, h1.loop-name { font-size:2em; }
+    .singular h1.entry-title a { color:inherit }
+  }
+
+/* =formatting
+   Be color-agnostic so that color can be modularly cascaded.
+   baymard.com/blog/formatting-links-for-usability
+   nngroup.com/articles/guidelines-for-visualizing-links/
+   --------------------------------------------------------------------- */
+  a:link { font-weight:bolder; }
+  nav a:link { font-weight:bold; }
+  a:link small { font-weight:lighter; }
+  strong a, small a, b a, i a, em a, cite a, code a, kbd a , s a,
+  h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight:inherit; }
+  a img { opacity:0.9; }
+  label { margin-right:.6em; }
+
+  /* =modifiers */
+  .dot-anchors a:link, .dash-anchors a:link, .solid-anchors a:link { text-decoration:none; border-bottom-width:1px; }
+  .dash-anchors a:link { border-bottom-style:dashed; }
+  .dot-anchors a:link  { border-bottom-style:dotted; }
+  .solid-anchors a:link, .dash-anchors a:hover, .dot-anchors a:hover { border-bottom-style:solid; }
+  .void-anchor-border a { border:0!important; }
+  .void-anchor-decor a { text-decoration:none; }
+  
+  @media (color) {
+    :not(.assist) a:not(:hover) { text-decoration:none; }
+  }
+ 
+/* =size/proximity
+   en.wikipedia.org/wiki/News_style
+   bit.ly/maglossary
+   --------------------------------------------------------------------- */
+   body { font-size:1em; line-height:1.618; } /* golden ratio */
+   ul, ol { padding-left:2em; } /* vs. 40px default from bit.ly/css2sample */
+
+   article figure + figure { margin-top:1.5em; }
+   figcaption { padding-top:.5em; padding-bottom:.5em; }
+   figcaption:first-child { padding-top:0; padding-bottom:0; } /* revert if caption is on top */
+   
+   @media (min-width:30em) and (min-height:20em) {
+    .upsize .entry-content,  /* Upsize content when applied to any ancestor. */
+    .upsize > .entry-summary,  /* Upsize excerpt only when applied to parent, e.g. post_class. */
+    main .arrestive { font-size:1.1em; }
+    .journalistic > .entry-content > p:first-child,
+    .journalistic .entry-content .standfirst,
+    .journalistic .entry-content .lede { font-size:1.236em; line-height:1.236; }
+   }
+
+/* =editor
+   bit.ly/wp-theme-review#WordPress-Generated_CSS_Classes
+   --------------------------------------------------------------------- */
+  .wp-caption {}
+  .wp-caption + .wp-caption { margin-top:1.5em; }
+  .wp-caption-text { padding-top:.5em; padding-bottom:.5em; }
+  .wp-caption-text { margin:0; }
+ 
+  .gallery-size-thumbnail .gallery-caption { display:none; }
+  dl.gallery-item { float:left; max-width:30%; margin:.5em 3% .5em 0; padding:0; }
+  dd.gallery-caption { margin-left:0; }
+
+  .alignnone, .alignleft, .alignright, .aligncenter, article .gallery { display:block; margin:1.1em 0; }
+  .aligncenter { margin-left:auto; margin-right:auto; }
+  .alignleft { float:left; margin-right:4%; }
+  .alignright { float:right; margin-left:4%; }
+  
+/* =entries
+   --------------------------------------------------------------------- */
+  .sticky {}
+  .hentry { clear:left; }
+  .hentry + .hentry { margin-top:2em; }
+  
+  .entry-title { margin-bottom:.2em; }
+  .entry-title:first-child { margin-top:0; }
+  .byline { margin:.5em 0; }
+  .entry-summary { clear:none; }
+  .entry-summary p:first-child { margin-top:0; }
+  .hide-unused .unused, .plural .byline, .hide-excerpts .entry-summary, .entry-summary ~ .entry-meta,
+  article.unrevised .byline [class*="modified-"] { display:none; }
+
+  .meta-label { font-size:inherit; font-weight:600; }
+  .entry-footer, .entry-meta, .comments, article.comment, #disqus_thread, #respond { clear:both; }
+  .xoxo { clear:both; list-style-type:none; padding-left:0; margin-bottom:2em; }
+  .xoxo li { clear:both; display:block; margin-top:1em; margin-bottom:1em; }
+  .comment-content {}
+  .bypostauthor {}
+  .thumbnail-anchor, .avatar-anchor {
+    display:block; float:left; clear:both;
+    margin-bottom:1em; margin-right:4%; 
+  }
+  .image-anchor:empty { display:none; float:none; }
