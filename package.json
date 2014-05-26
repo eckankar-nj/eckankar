@@ -1,6 +1,31 @@
 {
   "private": true,
   "devDependencies": {
-    "less": "^1.7.0"
+    "less": "^1.7.0",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-less": "^0.11.0"
+  },
+  "jshintConfig": {
+    "asi": true,
+    "boss": true,
+    "browser": true,
+    "debug": true,
+    "devel": true,
+    "eqnull": true,
+    "expr": true,
+    "globals": {},
+    "lastsemic": true,
+    "latedef": "nofunc",
+    "laxcomma": true,
+    "maxcomplexity": 10,
+    "maxerr": 10,
+    "maxlen": 115,
+    "maxparams": 4,
+    "node": true,
+    "sub": true,
+    "supernew": true,
+    "trailing": true,
+    "undef": true,
+    "unused": true
   }
 }

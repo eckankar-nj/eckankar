@@ -1,0 +1,36 @@
+/*!
+ * tame.css  mild unobtrusive resets
+ * @version  2013.05.06
+ * @link     github.com/ryanve/css3base
+ * @license  MIT
+ */
+
+::-moz-selection { text-shadow:none }
+     ::selection { text-shadow:none }
+
+a {
+    display:inline-block; /* Subdue background-color issues - airve.com/demo/opacity-background */
+    max-width:100%; /* Prevent inline-block anchors from breaking responsiveness. */
+}
+
+/* Keep img flush to its container (h5bp.com/i/440) */
+img { vertical-align:middle }
+
+/* Unobtrusively tame borders (bit.ly/hr-customization) */
+hr { border-bottom:0; border-left:0; border-right:0 }
+img, iframe { border:0 }
+
+/* Re: bit.ly/css2sample and git.io/normalize  */
+fieldset { border:0; padding:0; margin-left:0; margin-right:0 }
+
+/* Reset unarticulates' decoration to distinguish from anchors. */
+u { text-decoration:none }
+a u { text-decoration:inherit }
+
+/* Void underlines added by visual editor misuse. */
+span[style] { text-decoration:none!important }
+
+/* j.mp/eLdiEt and prevent body bit.ly/collapsing-margins */
+body:before, body:after,
+.clearfix:before, .clearfix:after { content:" "; display:table }
+.clearfix:after { clear:both }
