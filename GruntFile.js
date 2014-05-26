@@ -31,5 +31,5 @@ module.exports = function(grunt) {
 
   grunt.registerTask('test', ['jshint:all'])
   grunt.registerTask('build', ['less:build'])
-  grunt.registerTask('default', ['test', 'less:build'])
+  grunt.registerTask('default', ['test', 'build'])
 };
