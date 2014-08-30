@@ -3,8 +3,10 @@
   .site-title a { margin:0; display:inline-block }
   .site-title a span {
     font-size:1.618em;
-    padding:0 10px 30px 0; 
+    padding:0 10px 10px 0; 
     display:inline-block;
+    position: relative;
+    top: .12em;
   }
   
   @media (max-width:30em) {
@@ -17,13 +19,17 @@
 
   @media screen, projection {  
     .site-header {
-      padding-top:.4em;
-      margin-bottom:2.6em;
+      padding:2px 6px 2px 4px;
+      margin-bottom:2em;
     }
   
     .site-footer {
-      border-top:2.6em solid @blue;
-      margin-top:1.6em;
+      border-top:2em solid @blue;
+      margin-top:1em;
+    }
+    .site-footer .container {
+      padding-left: 6px;
+      padding-right: 6px;
     }
   }
   
@@ -35,11 +41,10 @@
     .site-title a:before {
       vertical-align:middle;
       display:inline-block;
-      margin:4px 4px 12px 0;
+      margin:4px 4px 4px 0;
       padding-right:12px;
       content:url(http://eck.airve.com/static/logo/eckankar-symbol_trim_60.png);
     }
-
     .site-footer, .site-footer a {
       background-color:@mist;
     }  
