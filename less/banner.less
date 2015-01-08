@@ -45,16 +45,31 @@
   @media screen, projection {
     .site-header,
     .site-header a { background-color:@blue; color:@white }
+    .site-title a { display:table; }
     .site-title a:before {
       vertical-align:middle;
       display:inline-block;
       margin:4px 4px 4px 0;
-      padding-right:12px;
+      padding-right:8px;
       content:url(http://eck.airve.com/static/logo/eckankar-symbol_trim_60.png);
+    }
+    @media (max-width:30em) {
+      .site-title a:before {
+        vertical-align:top;
+        padding-right:6px;
+        content:url(http://eck.airve.com/static/logo/eckankar-symbol_trim_50.png);
+      }
+      .site-title a span {
+        white-space:prewrap;
+        word-wrap:normal;
+        max-width:50%;
+        display:inline-block;
+        padding-top:6px;
+      }
     }
     .site-footer, .site-footer a {
       background-color:@mist;
-    }  
+    }
   }
   .site-header a:focus {}
   .site-header a:hover {}
