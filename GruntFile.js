@@ -14,7 +14,7 @@ module.exports = function(grunt) {
     },
     less: {
       options: {
-        cleancss: true
+        compress: false
       },
       build: {
         files: ['base', 'style', 'login'].reduce(function(o, v) { 
