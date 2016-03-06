@@ -1,4 +1,4 @@
-# /wp-content/themes/eckankar
+`/wp-content/themes/eckankar`
 
 ## Developer notes
 
