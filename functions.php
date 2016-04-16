@@ -78,6 +78,7 @@
     };
     
     $member = current_user_can('read');
+    if (!$member && $is_page('members')) return $memo = 'default';
     $plural = !is_singular();
     $categ = $plural ? 'is_category' : 'in_category';
     $logic = ['events' => [
