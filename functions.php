@@ -187,7 +187,7 @@
   //}, 10, 3);
   
   add_filter('@chela_login_hint', function() {
-    $hint = 'If you are a member of Eckankar please log in with the user name and password information below. If you are interested in becoming a member, you may read about <a href=/membership>membership</a> details.
+    $hint = 'If you are a member of Eckankar please log in with the user name and password information below. If you are interested in becoming a member, please read about <a href=/membership>membership</a> details.
    <ul><li>The user name is chela.</li>
      <li>The <b>chela</b> password is the last word in the last sentence of the most recent Wisdom Notes.</li></ul>';
     return "<p class='hint'>$hint</p>";
