@@ -943,3 +943,44 @@ dd.meta-value.tax-value.access-value { 	display: none; }
 
 .post dd.meta-value.time-value.time-modified { 	display: block; }
 /* end of metatag overrides */
+
+/* Full-footer styling for 4 columns */
+.fourcolfooterfloat {
+       float: left;
+       width:25%;
+       padding-top: 0%;
+}
+
+.fourcolfooterfloat h4 {
+       color: #02539c;
+}
+
+#ff-col1 br {
+        padding-top: 60px;
+}
+
+#ff-col2 a:hover  { /* rollover effect for  h4 titles and list item text */
+       opacity: 0.7;
+       text-decoration: none;
+}
+
+
+#ff-col2 li:before  {  
+  color:#02539c; /* set color to blue */
+  content:"\2022"; /* /2022 is the numerical unicode for • */
+  font-size:1.5em; /* set the font-size of the bullet if necessary. Make sure to use em or %*/
+  padding-right:.25em; /* give the bullet some padding from the text Make sure to use em*/
+  position:relative;
+  top:.1em; /* set the vertical position of the bullet if necessary. Make sure to use em or % */
+}
+
+h4  .fourcolfooterfloat {color: #02539c;}
+
+
+#copyright-msg {
+	clear: both; 
+        line-height: 95%;
+	text-align: left;
+	font-weight: lighter;
+	padding-top: 20px;
+}
