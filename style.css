@@ -955,6 +955,11 @@ dd.meta-value.tax-value.access-value { 	display: none; }
        color: #02539c;
 }
 
+#footer-widgets .footer-widget li a {
+	color: #000;
+	text-decoration: none;
+}
+
 #ff-col1 br {
         padding-top: 60px;
 }
