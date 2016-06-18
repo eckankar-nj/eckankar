@@ -474,10 +474,10 @@ main:after {
   a:link,
   a:visited,
   a:active {
-    color: #02539c;
+    color: #000;
   }
   ::-moz-selection {
-    background: #02539c;
+    background: #000;
     color: #fefefe;
   }
   ::selection {
@@ -963,13 +963,6 @@ dd.meta-value.tax-value.access-value { 	display: none; }
 #ff-col1 br {
         padding-top: 60px;
 }
-
-#ff-col2   /* for line items in column */
-       a:link,
-       a:visited,
-       a:active {
-       	#000;
-       }
 
 #ff-col2 a:hover  { /* rollover effect for  h4 titles and list item text */
        opacity: 0.7;
