@@ -902,3 +902,44 @@ main .menu-item .sub-menu {
 [style*="border"].fc-event {
   border-width: 0 !important;
 }
+/* overrides to remove metatags at bottom of pages and only display author, & posted and updated dates in all posts */
+dt.meta-label.time-label.time-published{ 	display: none; }
+
+dd.meta-value.time-value.time-published { 	display: none; }
+
+dt.meta-label.time-label.time-modified{ 	display: none; }
+
+dd.meta-value.time-value.time-modified { 	display: none; }
+
+dt.meta-label.tax-label.categories-label{ 	display: none; }
+
+dd.meta-value.tax-value.categories-value { 	display: none; }
+
+dt.meta-label.author-label.author-label{ 	display: none; }
+
+dd.meta-value.author-value.author-value { 	display: none; }
+
+dt.meta-label.tax-label.tags-label{ 	display: none; }
+
+dd.meta-value.tax-value.tags-value { 	display: none; }
+
+dt.meta-label.tax-label.newsletters-label{ 	display: none; }
+
+dd.meta-value.tax-value.newsletters-value { 	display: none; }
+
+dt.meta-label.tax-label.access-label{ 	display: none; }
+
+dd.meta-value.tax-value.access-value { 	display: none; }
+
+.post dt.meta-label.author-label.author-label{ 	display: block; }
+
+.post dd.meta-value.author-value.author-value { 	display: block; }
+
+.post dt.meta-label.time-label.time-published{ 	display:block; }
+
+.post dd.meta-value.time-value.time-published { 	display: block; }
+
+.post dt.meta-label.time-label.time-modified { 	display: block; }
+
+.post dd.meta-value.time-value.time-modified { 	display: block; }
+/* end of metatag overrides */
