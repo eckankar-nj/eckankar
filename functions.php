@@ -202,7 +202,7 @@
     $in = is_user_logged_in();
     $url = $in ? home_url('members') : wp_logout_url();
     $form = $in ? "<a href='$url'>Logout</a>"
-      : "<h3><a href='$url'>Member</a> Login</h3>"
+      : "<h1><a href='$url'>Member</a> Login</h3>"
       . apply_filters('@chela_login_hint', null)
       . apply_filters('@chela_login_form', null);
     $class = $in ? 'loop-logout' : 'loop-login';
