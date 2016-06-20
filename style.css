@@ -15,7 +15,7 @@ Version: 0.4.0
  -------------------------------------------------- */
 h1,
 h2 {
-  margin: .618em 0;
+  margin: .0em 0;
   line-height: 1.236;
 }
 h3,
@@ -555,7 +555,7 @@ article.type-page .author-label,
 article.type-page .author-value {
   display: none;
 }
-.loop-access {
+.loop-access { /* I changed padding from 1 to 0 to attempt to bring up login message; did so only partially*/
   margin: 0 0 2em;
   padding: 0em;
   /*background:@sand;*/
