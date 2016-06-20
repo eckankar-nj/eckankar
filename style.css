@@ -1009,8 +1009,8 @@ clear: both;
 }
 /* ****END Fixes from Ryan 6/18/16 **** */
 
-/* ****Color Adjustment for Footer**** */
-/*NOTEL I changed color inherit to blue in line 59 to keep h1 heading blue*/
+/* ****Color, Position, and Rollover Adjustments for Footer**** */
+/*NOTE: I changed color inherit to blue in line 59 to keep h1 heading blue*/
 
 /* Need this to make the list items black, since other changes to H4 and H1 kept them blue*/
 @media (color) {
@@ -1023,13 +1023,10 @@ clear: both;
    list-style-type: disc;
    color:#000000; /* set color  for bullet and line text */
  }
- 
 
  .singular h1.entry-title a {
     color: #02539c;
   }
-
-
 
 .footer-widget-grid h4 {
        color: #02539c;
@@ -1039,7 +1036,10 @@ clear: both;
 	color: #000;
 	text-decoration: none;
 }
-/* ****END Color Adjustment for Footer **** */
+.site-footer ul, ol {
+  padding-left: 1em;
+}
+
 #ff-col1 br {
         padding-top: 60px;
 }
@@ -1048,6 +1048,7 @@ clear: both;
        opacity: 0.7;
        text-decoration: none;
 }
+
 #copyright-msg {
 	clear: both; 
         line-height: 95%;
@@ -1055,3 +1056,4 @@ clear: both;
 	font-weight: lighter;
 	padding-top: 20px;
 }
+/* ****END Colorm, Position, and Rollover Adjustments for Footer **** */
