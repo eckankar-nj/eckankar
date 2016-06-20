@@ -556,7 +556,7 @@ article.type-page .author-value {
   display: none;
 }
 .loop-access {
-  margin: 0 0 2em;
+  margin: 0 0 0em;
   padding: 1em;
   /*background:@sand;*/
 }
@@ -1069,5 +1069,4 @@ clear: both;
 	padding-top: 20px;
 }
 /* ****END Color, Position, and Rollover Adjustments for Footer **** */
-.loop-login {margin: .0em 0;
-}
+
