@@ -1069,5 +1069,6 @@ clear: both;
 	padding-top: 20px;
 }
 /* ****END Color, Position, and Rollover Adjustments for Footer **** */
-.loop-login h1 {margin-top:0px;
+.loop-login {margin-top: 0px;
+
 }
