@@ -945,6 +945,8 @@ dd.meta-value.tax-value.access-value { 	display: none; }
 /* end of metatag overrides */
 /* ******************************************************************* */
 /* Make footer columns responsive this works */
+ /* Make footer columns responsive */
+
 /* DONT add another text in the widget or it will mess up*/
 .footer-widget-area:before,
 .footer-widget-area:after {
@@ -968,7 +970,7 @@ clear: both;
    width: 48%;
    margin-right: 2%;
  }
- 
+
  .widget:nth-child(odd) .footer-widget-grid {
    clear: both;
  }
@@ -987,41 +989,29 @@ clear: both;
 }
 
 /* ****Fixes from Ryan 6/18/16 **** */
+/* clearfix */
+.hentry:before,
+.hentry:after {
+ content: " ";
+ display: table;
+}
 
-/* Need this to make the list items black, since other changes to H4 and H1 kept them blue*?*/
-@media (color) {
- .site-footer li a[href] {
-   color: inherit;
- }
+.hentry:after {
+ clear: both;
+}
 
-
-  .site-footer li {
-   list-style-type: disc;
-   color:#000000; /* set color  for bullet and line text */
- }
- 
-/* ****END Fixes from Ryan 6/18/16 **** */
-
-/* ****Footer Color adjustments **** */
-/*Also I changed color inherit to blue in line 59 to keep h1 heading blue*/
-@media (color) {
- .site-footer li a[href] {
-   color: inherit;
+/* go back and change .less file - this reduces spacing to right of featured thumbail */
+@media (min-width: 25em) {
+ .plural .thumbnail-anchor {
+   width : auto;
+   max-width: 15em;
  }
 }
- .site-footer li {
-   list-style-type: disc;
-   color:#000000; /* set color  for both bullet and line text */
- }
-
-.site-footer ul, ol {
-  padding-left: 1em;
+/* ****END Fixes from Ryan 6/18/16 **** */
 
 .footer-widget-grid h4 {
        color: #02539c;
 }
-/* ****END Footer Color adjustments **** */
-
 
 #footer-widgets .footer-widget li a {
 	color: #000;
@@ -1036,8 +1026,6 @@ clear: both;
        opacity: 0.7;
        text-decoration: none;
 }
-
-
 #copyright-msg {
 	clear: both; 
         line-height: 95%;
