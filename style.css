@@ -1005,9 +1005,25 @@ clear: both;
 }
 /* ****END Fixes from Ryan 6/18/16 **** */
 
+/* ****Footer Color adjustments **** */
+@media (color) {
+ .site-footer li a[href] {
+   color: inherit;
+ }
+}
+ .site-footer li {
+   list-style-type: disc;
+   color:#000000; /* set color  for both bullet and line text */
+ }
+
+.site-footer ul, ol {
+  padding-left: 1em;
+
+
 .footer-widget-grid h4 {
        color: #02539c;
 }
+/* ****END Footer Color adjustments **** */
 
 
 #footer-widgets .footer-widget li a {
