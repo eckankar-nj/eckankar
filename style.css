@@ -1071,3 +1071,7 @@ clear: both;
 	padding-top: 20px;
 }
 /* ****END Color, Position, and Rollover Adjustments for Footer **** */
+/* used this to override line 18 to fix position of login message header*/
+.loop-access h1 {
+margin: .0em 0;
+}
