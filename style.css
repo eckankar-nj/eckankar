@@ -985,14 +985,25 @@ clear: both;
    clear: both;
  }
 }
-
-
-/* Full-footer styling for 4 columns */
-.fourcolfooterfloat {
-       float: left;
-       width:25%;
-       padding-top: 0%;
+/* ****Fixes from Ryan 6/18/16 **** */
+/* clearfix */
+.hentry:before,
+.hentry:after {
+ content: " ";
+ display: table;
 }
+.hentry:after {
+ clear: both;
+}
+
+/* go back and change .less file - this reduces spacing to right of featured thumbail */
+@media (min-width: 25em) {
+ .plural .thumbnail-anchor {
+   width : auto;
+   max-width: 15em;
+ }
+}
+/* ****END Fixes from Ryan 6/18/16 **** */
 
 .fourcolfooterfloat h4 {
        color: #02539c;
