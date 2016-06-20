@@ -943,6 +943,49 @@ dd.meta-value.tax-value.access-value { 	display: none; }
 
 .post dd.meta-value.time-value.time-modified { 	display: block; }
 /* end of metatag overrides */
+/* ******************************************************************* */
+/* Make footer columns responsive */
+/* DONT add another text in the widget or it will mess up*/
+.footer-widget-area:before,
+.footer-widget-area:after {
+ content: " ";
+ display: table;
+}
+
+.footer-widget-area:after {
+clear: both;
+}
+
+.footer-widget-area .widget {
+ margin-left: 0;
+ margin-right: 0;
+ width: 100%;
+}
+
+@media (min-width: 35em) and (max-width: 59.9999999999em) {
+ .footer-widget-grid {
+   float: left;
+   width: 48%;
+   margin-right: 2%;
+ }
+ 
+ .widget:nth-child(odd) .footer-widget-grid {
+   clear: both;
+ }
+}
+
+@media (min-width: 60em) {
+ .footer-widget-grid {
+   float: left;
+   width: 24%;
+   margin-right: 1%;
+ }
+
+ .widget:nth-child(5n) .footer-widget-grid {
+   clear: both;
+ }
+}
+
 
 /* Full-footer styling for 4 columns */
 .fourcolfooterfloat {
