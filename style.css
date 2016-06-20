@@ -556,8 +556,8 @@ article.type-page .author-value {
   display: none;
 }
 .loop-access {
-  margin: 0 0 0em;
-  padding: 1em;
+  margin: 0 0 2em;
+  padding: 0em;
   /*background:@sand;*/
 }
 @media (min-width: 0) {
