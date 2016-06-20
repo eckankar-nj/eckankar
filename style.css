@@ -1024,14 +1024,7 @@ clear: both;
 }
 
 
-#ff-col2 li:before  {  
-  color:#02539c; /* set color to blue */
-  content:"\2022"; /* /2022 is the numerical unicode for • */
-  font-size:1.5em; /* set the font-size of the bullet if necessary. Make sure to use em or %*/
-  padding-right:.25em; /* give the bullet some padding from the text Make sure to use em*/
-  position:relative;
-  top:.1em; /* set the vertical position of the bullet if necessary. Make sure to use em or % */
-}
+
 
 h4  .fourcolfooterfloat {color: #02539c;}
 
