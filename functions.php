@@ -189,7 +189,7 @@
   add_filter('@chela_login_hint', function() {
     $hint = 'Welcome to the member login page. This area of the site offers additional content (tools, classes, and news) to members of Eckankar. If you are a member of Eckankar please log in with the user name and password information below. If you are interested in becoming a member, please read about <a href=/membership>membership</a> details.
    <ul><li>The username is chela.</li>
-     <li>The <b>chela</b> password is the <b>last word in the title</b> of Sri Harold''s front page article in the most recent <em>Mystic World</em>, <b>plus the publication year</b>. (Use all lowercase letters with no spaces. Example: ****2016)</li></ul>';
+     <li>The <b>chela</b> password is the <b>last word in the title</b> of the front page article in the most recent <em>Mystic World</em>, <b>plus the publication year</b>. (Use all lowercase letters with no spaces. Example: ****2016)</li></ul>';
     return "<p class='hint'>$hint</p>";
   });
   
