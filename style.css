@@ -1072,3 +1072,12 @@ clear: both;
 .loop-access h1 {
 margin: .0em 0;
 }
+
+/*disable label links on single event page*/
+.single-ai1ec_event .ai1ec-category {pointer-events: none;}
+.single-ai1ec_event .ai1ec-tag {pointer-events: none;}
+
+/*for use when needed in event descriptions with bulleted lists*/
+ul, ol   {padding-left:2.55em;}
+#moveoverlist {
+padding-left:12em;}
