@@ -1081,3 +1081,17 @@ margin: .0em 0;
 ul, ol   {padding-left:2.55em;}
 #moveoverlist {
 padding-left:12em;}
+
+/*For ESA program page*/
+#triple ul {
+  width:760px;
+  margin-bottom:20px;
+  overflow:hidden;
+}
+#triple li{
+  line-height:1.5em;
+  border-bottom:2.72727px dotted #ddd6bb;
+  float:left;
+  display:inline;
+}
+#triple li  { width:33.333%; } <span class="code-comment">/* 3 col */</span>
