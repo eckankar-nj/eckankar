@@ -776,11 +776,11 @@ main .widget_nav_menu a {
 }
 main .widget_nav_menu a:link,
 main .widget_nav_menu a:visited {
-  background-color: #4da4da; /*main menu - original value #ddeefd changed 7-31-16*/
+  background-color: #ddeefd;  
 }
 main .widget_nav_menu li li a:link,
 main .widget_nav_menu li li a:visited {
-  background-color: #eef6fd; /*sub menu left as original*/
+  background-color: #eef6fd;  
 }
 main .widget_nav_menu li + li {
   margin-top: 2px;
