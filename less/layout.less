@@ -6,7 +6,7 @@
 /* =layout
    --------------------------------------------------------------------- */
   body { margin:0 auto; width:100%; padding:0; }
-  
+
   .site-header { margin:0 auto; }
   .site-branding { /*margin-bottom:1em;*/ }
   .site-description { font-weight:inherit; }
@@ -19,17 +19,17 @@
   li.widget { display:block; margin:2em 0; }
   li.widget:first-child { margin-top:inherit; }
   li.widget:last-child { margin-bottom:inherit; }
-  
+
   main {
     display:block; clear:left;
-    width:100%; max-width:96%; 
+    width:100%; max-width:96%;
     margin:1em auto; padding:0 2%;
   }
   main:after { display:table; content:" "; clear:both; }
   @media print {
     main { max-width:100%; padding:0 }
   }
-    
+
   .site-header .container,
   .site-footer .container { padding:2px; margin:0 auto; }
 
@@ -43,18 +43,18 @@
   .plural .loop-nav [rel~="next"]:after { content:" >"; }
 
   /* =layout=modifiers */
-  
+
   @media (min-width:53em) {
     .site-header .container,
     .site-footer .container,
     .l-rsidebar main { max-width:50em; }
     .l-rsidebar .loop { width:100%; max-width:31em; float:left; }
-    .l-rsidebar .major-widget-area, 
+    .l-rsidebar .major-widget-area,
     .l-rsidebar .minor-widget-area { width:32%; max-width:18.75em; margin:0; float:right; clear:right; }
-    
+
     .l-lsidebar main { max-width:50em; }
     .l-lsidebar .loop { width:100%; max-width:30em; float:right; }
-    .l-lsidebar .major-widget-area, 
+    .l-lsidebar .major-widget-area,
     .l-lsidebar .minor-widget-area { width:32%; max-width:18em; margin:0; float:left; clear:left; }
   }
 
@@ -72,10 +72,11 @@
     .l-rsidebar .loop, .l-lsidebar .loop { max-width:43.75em; }
   }
 
-  /* clearfix */
-  .l-lsidebar .loop:after, 
-  .l-lsidebar .minor-widget-area:after { display:table; content:" "; clear:both; }
-  
+  .l-lsidebar .loop,
+  .l-lsidebar .minor-widget-area {
+    .clearfix();
+  }
+
   /* overrides */
   .full-width .loop, .full-width .major-widget-area, .full-width .minor-widget-area {
     width:100%; max-width:100%; clear:both; padding-left:0; padding-right:0; margin-bottom:1em;

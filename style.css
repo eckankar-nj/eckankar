@@ -5,7 +5,7 @@ Description: Custom child theme for use with Action theme
 Author: Ryan Van Etten
 Author URI: http://ryanve.com
 Template: action
-Version: 0.4.0
+Version: 0.5.0
 */
 /*!
  * content styles adapted from "action" theme
@@ -25,8 +25,6 @@ h6 {
   margin-top: 1.146em;
   margin-bottom: 1em;
 }
-.loop-access h1 {margin:.0em; 0;}
-
 main h1,
 main h2,
 main h3,
@@ -59,7 +57,7 @@ h6 {
     font-size: 2em;
   }
   .singular h1.entry-title a {
-    color: #02539c;
+    color: inherit;
   }
 }
 /* =formatting
@@ -447,11 +445,15 @@ main:after {
     max-width: 43.75em;
   }
 }
-/* clearfix */
+.l-lsidebar .loop:before,
+.l-lsidebar .minor-widget-area:before,
 .l-lsidebar .loop:after,
 .l-lsidebar .minor-widget-area:after {
-  display: table;
   content: " ";
+  display: table;
+}
+.l-lsidebar .loop:after,
+.l-lsidebar .minor-widget-area:after {
   clear: both;
 }
 /* overrides */
@@ -464,6 +466,12 @@ main:after {
   padding-left: 0;
   padding-right: 0;
   margin-bottom: 1em;
+}
+.fc-day-content [style*="height"] {
+  height: auto !important;
+}
+[style*="border"].fc-event {
+  border-width: 0 !important;
 }
 /*!
  * custom styles
@@ -479,7 +487,7 @@ main:after {
     color: #02539c;
   }
   ::-moz-selection {
-    background: #000;
+    background: #02539c;
     color: #fefefe;
   }
   ::selection {
@@ -491,6 +499,9 @@ html {
   background-color: #fefefe;
   color: #151515;
   font-size: 1em;
+}
+a:hover {
+  transition: background-color 0.2s ease-out;
 }
 body {
   background-image: none;
@@ -557,9 +568,9 @@ article.type-page .author-label,
 article.type-page .author-value {
   display: none;
 }
-.loop-access { /* I changed padding from 1 to 0 to attempt to bring up login message; did so only partially*/
+.loop-access {
   margin: 0 0 2em;
-  padding: 0em;
+  padding: 1em;
   /*background:@sand;*/
 }
 @media (min-width: 0) {
@@ -655,11 +666,8 @@ body {
     padding-top: 6px;
   }
 }
-a:hover {
-  transition: background-color 0.2s ease-out;
-}
 /* =tweaks
-  --------------------------------------------------------------------- */
+--------------------------------------------------------------------- */
 .site-footer .widget_text + .widget_text {
   margin-top: 0.5em;
 }
@@ -746,7 +754,7 @@ a.navicon .entity {
   color: #4da4d7;
 }
 /* =menu
-   --------------------------------------------------------------------- */
+ --------------------------------------------------------------------- */
 main .widget_nav_menu {
   font-weight: bold;
   margin: 1.5em 0;
@@ -776,11 +784,11 @@ main .widget_nav_menu a {
 }
 main .widget_nav_menu a:link,
 main .widget_nav_menu a:visited {
-  background-color: #ddeefd;  
+  background-color: #ddeefd;
 }
 main .widget_nav_menu li li a:link,
 main .widget_nav_menu li li a:visited {
-  background-color: #eef6fd;  
+  background-color: #eef6fd;
 }
 main .widget_nav_menu li + li {
   margin-top: 2px;
@@ -898,200 +906,151 @@ main .menu-item .sub-menu {
     clear: right;
   }
 }
-.fc-day-content [style*="height"] {
-  height: auto !important;
+/* overrides to remove meta at bottom of pages and only display author, posted, updated dates in all posts */
+.meta-label.time-label.time-published,
+.meta-value.time-value.time-published,
+.meta-label.time-label.time-modified,
+.meta-value.time-value.time-modified,
+.meta-label.tax-label.categories-label,
+.meta-value.tax-value.categories-value,
+.meta-label.author-label.author-label,
+.meta-value.author-value.author-value,
+.meta-label.tax-label.tags-label,
+.meta-value.tax-value.tags-value,
+.meta-label.tax-label.newsletters-label,
+.meta-value.tax-value.newsletters-value,
+.meta-label.tax-label.access-label,
+.meta-value.tax-value.access-value {
+  display: none;
 }
-[style*="border"].fc-event {
-  border-width: 0 !important;
+.post .meta-label.author-label.author-label,
+.post .meta-value.author-value.author-value,
+.post .meta-label.time-label.time-published,
+.post .meta-value.time-value.time-published,
+.post .meta-label.time-label.time-modified,
+.post .meta-value.time-value.time-modified {
+  display: block;
 }
-/* overrides to remove metatags at bottom of pages and only display author, & posted and updated dates in all posts */
-dt.meta-label.time-label.time-published{ 	display: none; }
-
-dd.meta-value.time-value.time-published { 	display: none; }
-
-dt.meta-label.time-label.time-modified{ 	display: none; }
-
-dd.meta-value.time-value.time-modified { 	display: none; }
-
-dt.meta-label.tax-label.categories-label{ 	display: none; }
-
-dd.meta-value.tax-value.categories-value { 	display: none; }
-
-dt.meta-label.author-label.author-label{ 	display: none; }
-
-dd.meta-value.author-value.author-value { 	display: none; }
-
-dt.meta-label.tax-label.tags-label{ 	display: none; }
-
-dd.meta-value.tax-value.tags-value { 	display: none; }
-
-dt.meta-label.tax-label.newsletters-label{ 	display: none; }
-
-dd.meta-value.tax-value.newsletters-value { 	display: none; }
-
-dt.meta-label.tax-label.access-label{ 	display: none; }
-
-dd.meta-value.tax-value.access-value { 	display: none; }
-
-.post dt.meta-label.author-label.author-label{ 	display: block; }
-
-.post dd.meta-value.author-value.author-value { 	display: block; }
-
-.post dt.meta-label.time-label.time-published{ 	display:block; }
-
-.post dd.meta-value.time-value.time-published { 	display: block; }
-
-.post dt.meta-label.time-label.time-modified { 	display: block; }
-
-.post dd.meta-value.time-value.time-modified { 	display: block; }
-/* end of metatag overrides */
-/* ******************************************************************* */
-/* Make footer columns responsive this works */
- /* Make footer columns responsive */
-
+/* Make footer columns responsive */
 /* DONT add another text in the widget or it will mess up*/
 .footer-widget-area:before,
 .footer-widget-area:after {
- content: " ";
- display: table;
+  content: " ";
+  display: table;
 }
-
 .footer-widget-area:after {
-clear: both;
+  clear: both;
 }
-
 .footer-widget-area .widget {
- margin-left: 0;
- margin-right: 0;
- width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
 }
-
-@media (min-width: 35em) and (max-width: 59.9999999999em) {
- .footer-widget-grid {
-   float: left;
-   width: 48%;
-   margin-right: 2%;
- }
-
- .widget:nth-child(odd) .footer-widget-grid {
-   clear: both;
- }
+@media (min-width: 35em) and (max-width: 60em) {
+  .footer-widget-grid {
+    float: left;
+    width: 48%;
+    margin-right: 2%;
+  }
+  .widget:nth-child(odd) .footer-widget-grid {
+    clear: both;
+  }
 }
-
 @media (min-width: 60em) {
- .footer-widget-grid {
-   float: left;
-   width: 24%;
-   margin-right: 1%;
- }
-
- .widget:nth-child(5n) .footer-widget-grid {
-   clear: both;
- }
+  .footer-widget-grid {
+    float: left;
+    width: 24%;
+    margin-right: 1%;
+  }
+  .widget:nth-child(5n) .footer-widget-grid {
+    clear: both;
+  }
 }
-
-/* ****Fixes from Ryan 6/18/16 **** */
-/* clearfix */
+/* thumbnail fix from Ryan 6/18/16 */
 .hentry:before,
 .hentry:after {
- content: " ";
- display: table;
+  content: " ";
+  display: table;
 }
-
 .hentry:after {
- clear: both;
+  clear: both;
 }
-
-/* go back and change .less file - this reduces spacing to right of featured thumbail */
+/* this reduces spacing to right of featured thumbail */
 @media (min-width: 25em) {
- .plural .thumbnail-anchor {
-   width : auto;
-   max-width: 15em;
- }
+  .plural .thumbnail-anchor {
+    width: auto;
+    max-width: 15em;
+  }
 }
-/* ****END Fixes from Ryan 6/18/16 **** */
-
 /* ****Color, Position, and Rollover Adjustments for Footer**** */
-/*NOTE: I changed color inherit to blue in line 59 to keep h1 heading blue*/
-
 /* Need this to make the list items black, since other changes to H4 and H1 kept them blue*/
 @media (color) {
- .site-footer li a[href] {
-   color: inherit;
- }
-}
-
-  .site-footer li {
-   list-style-type: disc;
-   color:#000000; /* set color  for bullet and line text */
- }
-
- .singular h1.entry-title a {
-    color: #02539c;
+  .site-footer li a[href] {
+    color: inherit;
   }
-
+}
+.site-footer li {
+  list-style-type: disc;
+  color: #000;
+  /* set color for bullet and line text */
+}
+.singular h1.entry-title a {
+  color: #02539c;
+}
 .footer-widget-grid h4 {
-       color: #02539c;
+  color: #02539c;
 }
-
 #footer-widgets .footer-widget li a {
-	color: #000;
-	text-decoration: none;
+  color: #000;
+  text-decoration: none;
 }
-.site-footer ul, ol {
+ol,
+.site-footer ul {
   padding-left: 1em;
 }
-
-
-#ff-col1 a:hover  { /* rollover effect for  h4 titles and list item text */
-       opacity: 0.7;
-       text-decoration: none;
+/* rollover effect for h4 titles and list item text */
+#ff-col1 a:hover,
+#ff-col2 a:hover,
+#ff-col3 a:hover,
+#ff-col4 a:hover {
+  opacity: 0.7;
+  text-decoration: none;
 }
-#ff-col2 a:hover  { /* rollover effect for  h4 titles and list item text */
-       opacity: 0.7;
-       text-decoration: none;
-}
-#ff-col3 a:hover  { /* rollover effect for  h4 titles and list item text */
-       opacity: 0.7;
-       text-decoration: none;
-}
-#ff-col4 a:hover  { /* rollover effect for  h4 titles and list item text */
-       opacity: 0.7;
-       text-decoration: none;
-}
-
 #copyright-msg {
-	clear: both; 
-        line-height: 95%;
-	text-align: left;
-	font-weight: lighter;
-	padding-top: 20px;
+  clear: both;
+  line-height: 95%;
+  text-align: left;
+  font-weight: lighter;
+  padding-top: 20px;
 }
 /* ****END Color, Position, and Rollover Adjustments for Footer **** */
 /* used this to override line 18 to fix position of login message header*/
 .loop-access h1 {
-margin: .0em 0;
+  margin: 0;
 }
-
-/*disable label links on single event page*/
-.single-ai1ec_event .ai1ec-category {pointer-events: none;}
-.single-ai1ec_event .ai1ec-tag {pointer-events: none;}
-
-/*for use when needed in event descriptions with bulleted lists*/
-ul, ol   {padding-left:2.55em;}
+/* disable label links on single event page */
+.single-ai1ec_event .ai1ec-category,
+.single-ai1ec_event .ai1ec-tag {
+  pointer-events: none;
+}
+/*for use when needed in event descriptions with bullet lists*/
+ul,
+ol {
+  padding-left: 2.55em;
+}
 #moveoverlist {
-padding-left:12em;}
-
+  padding-left: 12em;
+}
 /*For ESA program page*/
 #triple ul {
-  width:760px;
-  margin-bottom:20px;
-  overflow:hidden;
+  width: 760px;
+  margin-bottom: 20px;
+  overflow: hidden;
 }
-#triple li{
-  line-height:1.5em;
-  border-bottom:2.72727px dotted #ddd6bb;
-  float:left;
-  display:inline;
+#triple li {
+  line-height: 1.5em;
+  border-bottom: 2.72727px dotted #ddd6bb;
+  float: left;
+  display: inline;
+  width: 33.333%;
 }
-#triple li  { width:33.333%; } <span class="code-comment">/* 3 col */</span>
