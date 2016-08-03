@@ -9,7 +9,7 @@
 
 [Install node](https://nodejs.org)
 
-### then run these `npm` commands
+Then run these `npm` commands
 
 ```sh
 npm install -g grunt-cli
