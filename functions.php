@@ -19,6 +19,11 @@
 # @link codex.wordpress.org/Function_Reference/wp_enqueue_style
 # @link codex.wordpress.org/Function_Reference/wp_enqueue_script
 
+function new_excerpt_more($more) {
+    return '...';
+}
+add_filter('excerpt_more', 'new_excerpt_more');
+
 'wp-login.php' === \basename($_SERVER['SCRIPT_FILENAME']) ? add_action('init', function() {
   $file = 'login.css';
   if (\is_file(trailingslashit(get_stylesheet_directory()) . $file)) {
