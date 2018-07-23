@@ -1028,11 +1028,7 @@ ol,
 .loop-access h1 {
   margin: 0;
 }
-/* disable label links on single event page */
-.single-ai1ec_event .ai1ec-category,
-.single-ai1ec_event .ai1ec-tag {
-  pointer-events: auto;
-}
+
 .single-ai1ec_event .ai1ec-categories .ai1ec-row
 {
   display: none;
