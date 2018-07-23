@@ -1054,3 +1054,24 @@ ol {
   display: inline;
   width: 33.333%;
 }
+
+/* Summer 2018 Updates */
+
+/* Set plural news h1 color to blue instead of default black */
+.loop-header h1 {color: #02539c;}
+
+/* removed underline for default h1 links - color: #02539c; */
+.entry-header h1 a
+{
+pointer-events: none;
+cursor: default;
+}
+
+/* This keeps the home page title at correct size - need sticky class to not affect plural news pages (it was fine in the Welcome post, but was smaller to due plural styling that took over) */
+.sticky h1 {
+    font-size: 2em;
+  }
+/* Remove hamburger icon when menu is displayed on top--larger windows */
+@media screen and (min-width: 53em) {
+.navicon {
+ display:none!important; } }
