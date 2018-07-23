@@ -1029,8 +1029,8 @@ ol,
   margin: 0;
 }
 /* disable labels links on single event page */
-.single-ai1ec_event .ai1ec-category,
-.single-ai1ec_event .ai1ec-tag {
+.single-ai1ec_event .ai1ec-categories,
+.single-ai1ec_event .ai1ec-tags {
   pointer-events: none;
 }
 
