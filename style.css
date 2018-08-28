@@ -1034,6 +1034,12 @@ ol,
   pointer-events: none;
 }
 
+/* disable labels single event page */
+.single-ai1ec_event .ai1ec-field-label,
+.single-ai1ec_event .ai1ec-field-value {
+  pointer-events: none;
+}
+
 /*for use when needed in event descriptions with bullet lists*/
 ul,
 ol {
