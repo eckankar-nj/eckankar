@@ -86,13 +86,18 @@
       ['is_singular', 'ai1ec_event'],
       ['is_tax', 'where']
     ], 'about' => [
+      ['is_page', 'about', 'activities', 'locations', 'youth-and-family', 'membership'],
       [$categ, 'menu-about']
     ], 'members' => !$member ? [] : [
-      [$categ, 'menu-members', 'member-news']
+      ['is_page', 'members', 'tools', 'contribute'],
+      [$categ, 'menu-members', 'classes', 'member-news']
     ], 'resources' => [
+      ['is_page', 'resources', 'presentations', 'broadcasts', 'clergy'],
+      ['is_page', 'workshops', 'speakers'], # these previously were categories
       ['is_tax', 'newsletter', 'public-newsletter'],
       [$categ, 'menu-resources', 'news']
     ], 'contact' => [
+      ['is_page', 'contact', 'mailinglist'],
       [$categ, 'menu-contact']
     ], 'default' => []];
     $not = $plural ? ['is_page'] : ['is_category', 'is_tag', 'is_tax'];
