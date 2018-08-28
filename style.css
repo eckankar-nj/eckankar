@@ -631,6 +631,11 @@ body {
     padding-bottom: 6px;
   }
 }
+/* Added to only display menu when smaller window needs it */
+@media screen and (min-width: 53em) {
+.navicon {
+ display:none!important; } }
+
 @media screen, projection {
   .site-header,
   .site-header a {
