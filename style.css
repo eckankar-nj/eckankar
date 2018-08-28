@@ -631,10 +631,6 @@ body {
     padding-bottom: 6px;
   }
 }
-/* Added to only display menu when smaller window needs it */
-@media screen and (min-width: 53em) {
-.navicon {
- display:none!important; } }
 
 @media screen, projection {
   .site-header,
@@ -1036,12 +1032,6 @@ ol,
 /* disable labels links on single event page */
 .single-ai1ec_event .ai1ec-categories,
 .single-ai1ec_event .ai1ec-tags {
-  pointer-events: none;
-}
-
-/* disable labels single event page */
-.single-ai1ec_event .ai1ec-field-label,
-.single-ai1ec_event .ai1ec-field-value {
   pointer-events: none;
 }
 
